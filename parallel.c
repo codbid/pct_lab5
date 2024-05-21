@@ -76,6 +76,7 @@ void print_array(int *array)
 
 int main()
 {
+    double serial = 1;
     int *array = malloc(sizeof(int) * SIZE);
     for (int i = 0; i < SIZE; i++)
         array[i] = get_rand_value();
@@ -89,7 +90,7 @@ int main()
 
     time = wtime() - time;
     // print_array(array);
-    printf("%lf\n", time);
+    printf("s: %lf\t%lf\n", serial/time, time);
     free(array);
     return 0;
 }
